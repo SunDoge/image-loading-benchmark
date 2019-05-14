@@ -42,6 +42,8 @@ def main():
         pass
     elif args.loader == 'dali-gpu':
         pass
+    elif args.loader == 'opencv':
+        pass
 
     start = time.perf_counter()
 
@@ -60,7 +62,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
 
     parser.add_argument('data', metavar='DIR', help='train or val dir')
-    parser.add_argument('-l', '--loader', choices=['pil', 'dali-cpu', 'dali-gpu', 'accimage'])
+    parser.add_argument('-l', '--loader', choices=['pil', 'dali-cpu', 'dali-gpu', 'accimage', 'opencv'])
     parser.add_argument('-b', '--batch_size', default=256, type=int)
     parser.add_argument('-n', '--num_workers', default=8, type=int)
 
